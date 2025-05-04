@@ -1,21 +1,7 @@
 🎬 Movies API
 This project provides a RESTful API built with Express.js and SQLite for performing CRUD operations on a movies database containing two tables: movie and director.
 
-📦 Installation
-Clone the repository:
 
-bash
-Copy
-Edit
-git clone <your-repo-url>
-cd <your-repo-directory>
-Install the dependencies:
-
-bash
-Copy
-Edit
-npm install
-🗄️ Database
 Database File: moviesData.db
 
 Tables
