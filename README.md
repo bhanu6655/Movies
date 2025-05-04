@@ -36,8 +36,6 @@ director_name	TEXT
 Path: GET /movies/
 
 Description: Returns a list of all movie names.
-
-✅ Response
 json
 Copy
 Edit
@@ -46,12 +44,13 @@ Edit
     "movieName": "Captain America: The First Avenger"
   }
 ]
+
+
+
+
 2. Add a New Movie
 Path: POST /movies/
-
 Description: Adds a new movie.
-
-📤 Request
 json
 Copy
 Edit
@@ -60,17 +59,17 @@ Edit
   "movieName": "Jurassic Park",
   "leadActor": "Jeff Goldblum"
 }
-✅ Response
 nginx
 Copy
 Edit
 Movie Successfully Added
-3. Get Movie by ID
+
+
+
+
+4. Get Movie by ID
 Path: GET /movies/:movieId/
-
 Description: Returns details of a movie based on the movie ID.
-
-✅ Response
 json
 Copy
 Edit
@@ -80,12 +79,12 @@ Edit
   "movieName": "The Lord of the Rings",
   "leadActor": "Elijah Wood"
 }
+
+
+
 4. Update Movie by ID
 Path: PUT /movies/:movieId/
-
 Description: Updates details of a movie.
-
-📤 Request
 json
 Copy
 Edit
@@ -94,27 +93,27 @@ Edit
   "movieName": "Thor",
   "leadActor": "Christopher Hemsworth"
 }
-✅ Response
 css
 Copy
 Edit
 Movie Details Updated
-5. Delete Movie by ID
+
+
+
+6. Delete Movie by ID
 Path: DELETE /movies/:movieId/
-
 Description: Deletes a movie based on the movie ID.
-
-✅ Response
 mathematica
 Copy
 Edit
 Movie Removed
+
+
+
+
 6. Get All Directors
 Path: GET /directors/
-
 Description: Returns a list of all directors.
-
-✅ Response
 json
 Copy
 Edit
@@ -124,12 +123,12 @@ Edit
     "directorName": "Joe Johnston"
   }
 ]
+
+
+
 7. Get Movies by Director
 Path: GET /directors/:directorId/movies/
-
 Description: Returns all movie names by a specific director.
-
-✅ Response
 json
 Copy
 Edit
@@ -138,6 +137,10 @@ Edit
     "movieName": "Captain Marvel"
   }
 ]
+
+
+
+
 🧾 Notes
 Uses CommonJS module syntax.
 
