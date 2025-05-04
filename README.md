@@ -5,10 +5,15 @@ This project provides a RESTful API built with Express.js and SQLite for perform
 Clone the repository:
 
 bash
+
 Copy
+
 Edit
+
 git clone <your-repo-url>
+
 cd <your-repo-directory>
+
 Install the dependencies:
 
 bash
