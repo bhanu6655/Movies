@@ -48,6 +48,9 @@ Edit
     "movieName": "Captain America: The First Avenger"
   }
 ]
+
+
+
 2. Add a New Movie
 Path: /movies/
 
@@ -69,6 +72,11 @@ nginx
 Copy
 Edit
 Movie Successfully Added
+
+
+
+
+
 3. Get Movie by ID
 Path: /movies/:movieId/
 
@@ -86,6 +94,11 @@ Edit
   "movieName": "The Lord of the Rings",
   "leadActor": "Elijah Wood"
 }
+
+
+
+
+
 4. Update Movie by ID
 Path: /movies/:movieId/
 
@@ -107,6 +120,11 @@ css
 Copy
 Edit
 Movie Details Updated
+
+
+
+
+
 5. Delete Movie by ID
 Path: /movies/:movieId/
 
@@ -119,6 +137,12 @@ mathematica
 Copy
 Edit
 Movie Removed
+
+
+
+
+
+
 6. Get All Directors
 Path: /directors/
 
@@ -136,6 +160,11 @@ Edit
     "directorName": "Joe Johnston"
   }
 ]
+
+
+
+
+
 7. Get Movies by Director
 Path: /directors/:directorId/movies/
 
