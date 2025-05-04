@@ -5,15 +5,10 @@ This project provides a RESTful API built with Express.js and SQLite for perform
 Clone the repository:
 
 bash
-
 Copy
-
 Edit
-
 git clone <your-repo-url>
-
 cd <your-repo-directory>
-
 Install the dependencies:
 
 bash
@@ -38,13 +33,11 @@ director_name	TEXT
 
 📚 API Endpoints
 1. Get All Movie Names
-Path: /movies/
-
-Method: GET
+Path: GET /movies/
 
 Description: Returns a list of all movie names.
 
-Response:
+✅ Response
 json
 Copy
 Edit
@@ -53,18 +46,12 @@ Edit
     "movieName": "Captain America: The First Avenger"
   }
 ]
-
-
-
-
 2. Add a New Movie
-Path: /movies/
-
-Method: POST
+Path: POST /movies/
 
 Description: Adds a new movie.
 
-Request:
+📤 Request
 json
 Copy
 Edit
@@ -73,22 +60,17 @@ Edit
   "movieName": "Jurassic Park",
   "leadActor": "Jeff Goldblum"
 }
-Response:
+✅ Response
 nginx
 Copy
 Edit
 Movie Successfully Added
-
-
-
 3. Get Movie by ID
-Path: /movies/:movieId/
+Path: GET /movies/:movieId/
 
-Method: GET
+Description: Returns details of a movie based on the movie ID.
 
-Description: Returns details of the specified movie.
-
-Response:
+✅ Response
 json
 Copy
 Edit
@@ -98,19 +80,12 @@ Edit
   "movieName": "The Lord of the Rings",
   "leadActor": "Elijah Wood"
 }
-
-
-
-
-
 4. Update Movie by ID
-Path: /movies/:movieId/
+Path: PUT /movies/:movieId/
 
-Method: PUT
+Description: Updates details of a movie.
 
-Description: Updates movie details by ID.
-
-Request:
+📤 Request
 json
 Copy
 Edit
@@ -119,42 +94,27 @@ Edit
   "movieName": "Thor",
   "leadActor": "Christopher Hemsworth"
 }
-Response:
+✅ Response
 css
 Copy
 Edit
 Movie Details Updated
-
-
-
-
-
 5. Delete Movie by ID
-Path: /movies/:movieId/
+Path: DELETE /movies/:movieId/
 
-Method: DELETE
+Description: Deletes a movie based on the movie ID.
 
-Description: Deletes a movie by ID.
-
-Response:
+✅ Response
 mathematica
 Copy
 Edit
 Movie Removed
-
-
-
-
-
-
 6. Get All Directors
-Path: /directors/
-
-Method: GET
+Path: GET /directors/
 
 Description: Returns a list of all directors.
 
-Response:
+✅ Response
 json
 Copy
 Edit
@@ -164,19 +124,12 @@ Edit
     "directorName": "Joe Johnston"
   }
 ]
-
-
-
-
-
 7. Get Movies by Director
-Path: /directors/:directorId/movies/
+Path: GET /directors/:directorId/movies/
 
-Method: GET
+Description: Returns all movie names by a specific director.
 
-Description: Returns all movies by a specific director.
-
-Response:
+✅ Response
 json
 Copy
 Edit
@@ -190,5 +143,5 @@ Uses CommonJS module syntax.
 
 Exports the Express app using default export syntax.
 
-Make sure the database file moviesData.db is present in the project directory.
+Ensure the moviesData.db file is present in the project directory before running the server.
 
