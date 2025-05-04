@@ -56,6 +56,7 @@ Edit
 
 
 
+
 2. Add a New Movie
 Path: /movies/
 
