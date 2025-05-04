@@ -80,8 +80,6 @@ Movie Successfully Added
 
 
 
-
-
 3. Get Movie by ID
 Path: /movies/:movieId/
 
