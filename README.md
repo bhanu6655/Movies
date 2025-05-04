@@ -1,186 +1,161 @@
-# Movies
+🎬 Movies API
+This project provides a RESTful API built with Express.js and SQLite for performing CRUD operations on a movies database containing two tables: movie and director.
 
-Given two files `app.js` and a database file `moviesData.db` consisting of two tables `movie` and `director`.
+📦 Installation
+Clone the repository:
 
-Write APIs to perform CRUD operations on the tables `movie`, `director` containing the following columns,
+bash
+Copy
+Edit
+git clone <your-repo-url>
+cd <your-repo-directory>
+Install the dependencies:
 
-**Movie Table**
+bash
+Copy
+Edit
+npm install
+🗄️ Database
+Database File: moviesData.db
 
-| Columns     | Type    |
-| ----------- | ------- |
-| movie_id    | INTEGER |
-| director_id | INTEGER |
-| movie_name  | TEXT    |
-| lead_actor  | TEXT    |
+Tables
+🎥 Movie Table
+Column	Type
+movie_id	INTEGER (Primary Key, Auto Increment)
+director_id	INTEGER
+movie_name	TEXT
+lead_actor	TEXT
 
-**Director Table**
+🎬 Director Table
+Column	Type
+director_id	INTEGER (Primary Key)
+director_name	TEXT
 
-| Columns       | Type    |
-| ------------- | ------- |
-| director_id   | INTEGER |
-| director_name | TEXT    |
+📚 API Endpoints
+1. Get All Movie Names
+Path: /movies/
 
-### API 1
+Method: GET
 
-#### Path: `/movies/`
+Description: Returns a list of all movie names.
 
-#### Method: `GET`
-
-#### Description:
-
-Returns a list of all movie names in the movie table
-
-#### Response
-
-```
+Response:
+json
+Copy
+Edit
 [
   {
-    movieName: "Captain America: The First Avenger",
-  },
-
-  ...
+    "movieName": "Captain America: The First Avenger"
+  }
 ]
-```
+2. Add a New Movie
+Path: /movies/
 
-### API 2
+Method: POST
 
-#### Path: `/movies/`
+Description: Adds a new movie.
 
-#### Method: `POST`
-
-#### Description:
-
-Creates a new movie in the movie table. `movie_id` is auto-incremented
-
-#### Request
-
-```
+Request:
+json
+Copy
+Edit
 {
   "directorId": 6,
   "movieName": "Jurassic Park",
   "leadActor": "Jeff Goldblum"
 }
-```
-
-#### Response
-
-```
+Response:
+nginx
+Copy
+Edit
 Movie Successfully Added
-```
+3. Get Movie by ID
+Path: /movies/:movieId/
 
-### API 3
+Method: GET
 
-#### Path: `/movies/:movieId/`
+Description: Returns details of the specified movie.
 
-#### Method: `GET`
-
-#### Description:
-
-Returns a movie based on the movie ID
-
-#### Response
-
-```
+Response:
+json
+Copy
+Edit
 {
-  movieId: 12,
-  directorId: 3,
-  movieName: "The Lord of the Rings",
-  leadActor: "Elijah Wood",
+  "movieId": 12,
+  "directorId": 3,
+  "movieName": "The Lord of the Rings",
+  "leadActor": "Elijah Wood"
 }
-```
+4. Update Movie by ID
+Path: /movies/:movieId/
 
-### API 4
+Method: PUT
 
-#### Path: `/movies/:movieId/`
+Description: Updates movie details by ID.
 
-#### Method: `PUT`
-
-#### Description:
-
-Updates the details of a movie in the movie table based on the movie ID
-
-#### Request
-
-```
+Request:
+json
+Copy
+Edit
 {
   "directorId": 24,
   "movieName": "Thor",
   "leadActor": "Christopher Hemsworth"
 }
-```
-
-#### Response
-
-```
+Response:
+css
+Copy
+Edit
 Movie Details Updated
+5. Delete Movie by ID
+Path: /movies/:movieId/
 
-```
+Method: DELETE
 
-### API 5
+Description: Deletes a movie by ID.
 
-#### Path: `/movies/:movieId/`
-
-#### Method: `DELETE`
-
-#### Description:
-
-Deletes a movie from the movie table based on the movie ID
-
-#### Response
-
-```
+Response:
+mathematica
+Copy
+Edit
 Movie Removed
-```
+6. Get All Directors
+Path: /directors/
 
-### API 6
+Method: GET
 
-#### Path: `/directors/`
+Description: Returns a list of all directors.
 
-#### Method: `GET`
-
-#### Description:
-
-Returns a list of all directors in the director table
-
-#### Response
-
-```
+Response:
+json
+Copy
+Edit
 [
   {
-    directorId: 1,
-    directorName: "Joe Johnston",
-  },
-
-  ...
+    "directorId": 1,
+    "directorName": "Joe Johnston"
+  }
 ]
-```
+7. Get Movies by Director
+Path: /directors/:directorId/movies/
 
-### API 7
+Method: GET
 
-#### Path: `/directors/:directorId/movies/`
+Description: Returns all movies by a specific director.
 
-#### Method: `GET`
-
-#### Description:
-
-Returns a list of all movie names directed by a specific director
-
-#### Response
-
-```
+Response:
+json
+Copy
+Edit
 [
   {
-    movieName: "Captain Marvel",
-  },
-
-  ...
+    "movieName": "Captain Marvel"
+  }
 ]
-```
+🧾 Notes
+Uses CommonJS module syntax.
 
-<br/>
+Exports the Express app using default export syntax.
 
-Use `npm install` to install the packages.
+Make sure the database file moviesData.db is present in the project directory.
 
-**Export the express instance using the default export syntax.**
-
-**Use Common JS module syntax.**
